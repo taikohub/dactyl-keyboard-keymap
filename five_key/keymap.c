@@ -1,3 +1,16 @@
+//This is an example of a keymap.c file for the Taikohub dactyl manuform keyboard with five keyed thumb cluster (size medium).
+//
+//1. A blank key with no function is indicated by 7 underscores: `________`.
+//
+//2. The `[_QWERTY]` layer is the default layer.
+//
+//3. Take note of where the `________` are in the `[_QWERTY]` layer. 
+//   The underscores are next to RAISE on the left and before LOWER on the right. 
+//   This is because these two keys do not exist on the five keyed thumb cluster.
+//   For instance, if you replaced the `_______` with KC_COPY and flashed it on your five keyed thumb cluster keyboard.
+//   It would still work. It's just that there would be no key where the KC_COPY should be, 
+//   so you wouldn't be able to actually press it.
+
 #include QMK_KEYBOARD_H
 
 #define _QWERTY 0
@@ -14,9 +27,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                         KC_H  , KC_J  , KC_K  , KC_L  ,KC_SCLN,KC_QUOT,
         KC_LCTL, KC_Z  , KC_X  , KC_C  , KC_V  , KC_B  ,                         KC_N  , KC_M  ,KC_COMM,KC_DOT ,KC_SLSH,KC_BSLASH,
                          KC_LBRC,KC_RBRC,                                                       KC_PLUS, KC_EQL,
-                                         RAISE,KC_SPC,                           KC_ENT, LOWER,
-                                         KC_TAB,KC_HOME,                         KC_END,  KC_DEL,
-                                         KC_BSPC, KC_GRV,                        KC_LGUI, KC_LALT
+                                         RAISE,_______,                        _______, LOWER,
+                                         KC_TAB,KC_HOME,                         KC_DEL,  KC_ENT,
+                                         KC_SPC, KC_BSPC,                        KC_LGUI, KC_LALT
     ),
 
     [_LOWER] = LAYOUT_5x6(
