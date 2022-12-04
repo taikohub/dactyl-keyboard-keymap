@@ -12,7 +12,7 @@ git clone https://github.com/taikohub/dactyl-keyboard-keymap.git
 
 3. Option 1: You should follow this if you are following the documentation at docs.taikohub.com. Copy the relevant folder into qmk's configuration files. The `five_key` folder is for the five keyed thumb cluster keyboard (size medium). The `six_key` folder is for the six keyed thumb cluster keyboard (size large). If you are following the documentation exactly from the website and you use a size medium keyboard, just replace the `keymap.c` file in your keymap with the one in `/five_key/keymap.c` in this repo:
 ```
-cp five_key/keymap.c -r ~/qmk_firmware/keyboards/handwired/dactyl_manuform/5x6/keymaps/taiko/keymap.c
+cp five_key/keymap.c ~/qmk_firmware/keyboards/handwired/dactyl_manuform/5x6/keymaps/taiko/keymap.c
 ```
 Ignore the `config.h` in the `five_key` directory. Follow the rest of the documentation, continuing with section [4.6 🖥️Keyboard - Flashing the Firmware](https://docs.taikohub.com/customizing-keyboard-layout-for-linux-with-qmk#4.6-keyboard-flashing-the-firmware). 
 
